@@ -4,12 +4,21 @@ let buttons = document.getElementById("buttons")
 // ⬇️ EVENT LISTENERS ⬇️
 
 buttons.addEventListener("click", function(e) {
-    console.log(e)
-    addToDisplay(e.target.textContent)
+    if (e.target.textContent !== "=") {
+        addToDisplay(e.target.textContent)
+    } else {
+        calculate()
+    }
 })
 
 // ⬇️ EVENT HANDLERS ⬇️
 
 function addToDisplay(char) {
-    display.value += char
+    if (char !== "=") {
+        display.value += char
+    }
+}
+
+function calculate() {
+    console.log("calculate")
 }
