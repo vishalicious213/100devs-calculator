@@ -18,7 +18,7 @@ buttons.addEventListener("click", function(e) {
     }
 
     if (e.target.id === "=") {
-        console.log(total, operation, num1)
+        calculate(total, operation, num1)
     }
 })
 
@@ -42,6 +42,27 @@ function getOperation(op) {
 
     if (total !== null) {
         operation = op
+    }
+}
+
+function calculate(total, op, num) {
+    let num1 = Number(total)
+    let num2 = Number(num)
+
+    if (op === "+") {
+        console.log(num1 + num2)
+    }
+
+    if (op === "-") {
+        console.log(num1 - num2)
+    }
+
+    if (op === "*") {
+        console.log(num1 * num2)
+    }
+
+    if (op === "/") {
+        console.log(num1 / num2)
     }
 }
 
