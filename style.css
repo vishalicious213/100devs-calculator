@@ -5,9 +5,12 @@
 }
 
 main {
-    max-width: 200px;
+    max-width: 220px;
     text-align: center;
-    margin: auto;
+    margin: 2rem auto 0;
+    background-color: black;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
 }
 
 button {
@@ -25,8 +28,8 @@ button:hover {
 }
 
 .display {
-    outline: 1px solid red;
+    background-color: whitesmoke;
     height: 3rem;
     max-width: 180px;
-    margin: auto;
+    margin: 0 auto .5rem;
 }
