@@ -15,10 +15,13 @@ buttons.addEventListener("click", function(e) {
 
 function addToDisplay(char) {
     if (char !== "=") {
+        if (char === "x") {
+            char = "*"
+        }
         display.value += char
     }
 }
 
 function calculate() {
-    console.log("calculate")
+    display.value = eval(display.value)
 }
