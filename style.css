@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+main {
+    max-width: 200px;
+    text-align: center;
+    margin: auto;
+}
+
 button {
     width: 2.25rem;
     height: 2.25rem;
@@ -16,4 +22,11 @@ button {
 button:hover {
     cursor: pointer;
     background-color: lightgray;
+}
+
+.display {
+    outline: 1px solid red;
+    height: 3rem;
+    max-width: 180px;
+    margin: auto;
 }
