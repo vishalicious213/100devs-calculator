@@ -1,5 +1,6 @@
 let display = document.getElementById("display")
 let buttons = document.getElementById("buttons")
+let clearBtn = document.getElementById("clear-btn")
 
 // ⬇️ EVENT LISTENERS ⬇️
 
@@ -14,7 +15,9 @@ buttons.addEventListener("click", function(e) {
 // ⬇️ EVENT HANDLERS ⬇️
 
 function addToDisplay(char) {
-    if (char !== "=") {
+    if (char === "clear") {
+        clearDisplay()
+    } else if (char !== "=") {
         if (char === "x") {
             char = "*"
         }
@@ -29,4 +32,8 @@ function calculate() {
     catch(error) {
         display.value = "Error"
     }
+}
+
+function clearDisplay() {
+    display.value = ""
 }
