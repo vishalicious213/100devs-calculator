@@ -1,10 +1,10 @@
 let buttons = document.getElementById("buttons")
 let numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
-let operations = ["/", "x", "+", "-", "=", "."]
+let operations = ["/", "x", "+", "-", "."]
 
 let num1 = null
-let num2 = null
 let total = null
+let operation = null
 
 // ⬇️ EVENT LISTENERS ⬇️
 
@@ -15,6 +15,10 @@ buttons.addEventListener("click", function(e) {
     
     if (operations.includes(e.target.id)) {
         getOperation(e.target.id)
+    }
+
+    if (e.target.id === "=") {
+        console.log(total, operation, num1)
     }
 })
 
@@ -31,7 +35,14 @@ function getNumber(num) {
 }
 
 function getOperation(op) {
-    console.log(op)
+    if (num1 !== null) {
+        total = num1
+        num1 = null
+    }
+
+    if (total !== null) {
+        operation = op
+    }
 }
 
 // ⬇️ RENDER APP ⬇️
@@ -39,6 +50,5 @@ function getOperation(op) {
 
 // Get num1
 // Get operator
-// Get num2
 // Display total when = is clicked
 // Handle negative numbers
