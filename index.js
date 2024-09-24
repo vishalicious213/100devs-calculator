@@ -21,7 +21,13 @@ buttons.addEventListener("click", function(e) {
 // ⬇️ EVENT HANDLERS ⬇️
 
 function getNumber(num) {
-    console.log(num)
+    if (num1 === null) {
+        num1 = num
+    } else {
+        num1 += num
+    }
+
+    console.log(num1)
 }
 
 function getOperation(op) {
