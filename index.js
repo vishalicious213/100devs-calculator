@@ -14,4 +14,16 @@ class Calculator {
         this.buttons.addEventListener("click", (e) => this.handleButtonClick(e))
         this.clearBtn.addEventListener("click", () => this.clearDisplay())
     }
+
+    // ⬇️ EVENT HANDLERS ⬇️
+
+    handleButtonClick(e) {
+        const char = e.target.textContent
+
+        if (char !== "=") {
+            this.addToDisplay(char)
+        } else {
+            this.calculate()
+        }
+    }
 }
