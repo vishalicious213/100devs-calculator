@@ -1,39 +1,9 @@
-let display = document.getElementById("display")
-let buttons = document.getElementById("buttons")
-let clearBtn = document.getElementById("clear-btn")
+// this solution takes an object-oriented approach
 
-// ⬇️ EVENT LISTENERS ⬇️
-
-buttons.addEventListener("click", function(e) {
-    if (e.target.textContent !== "=") {
-        addToDisplay(e.target.textContent)
-    } else {
-        calculate()
+class Calculator {
+    constructor(displayID, buttonsID, clearBtnID) {
+        this.display = document.getElementById(displayID)
+        this.buttons = document.getElementById(buttonsID)
+        this.clearBtn = document.getElementById(clearBtnID)
     }
-})
-
-// ⬇️ EVENT HANDLERS ⬇️
-
-function addToDisplay(char) {
-    if (char === "clear") {
-        clearDisplay()
-    } else if (char !== "=") {
-        if (char === "x") {
-            char = "*"
-        }
-        display.value += char
-    }
-}
-
-function calculate() {
-    try {
-        display.value = eval(display.value)
-    }
-    catch(error) {
-        display.value = "Error"
-    }
-}
-
-function clearDisplay() {
-    display.value = ""
 }
