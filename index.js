@@ -32,6 +32,7 @@ class Calculator {
     // Add clicked button's character to display
     addToDisplay(char) {
         if (char === "clear") {
+            char = ""
             this.clearDisplay()
         } else if (char !== "=") {
             if (char === "x") {
@@ -55,3 +56,5 @@ class Calculator {
         this.display.value = ""
     }
 }
+
+const calculator = new Calculator("display", "buttons", "clear-btn")
