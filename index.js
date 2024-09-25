@@ -50,4 +50,8 @@ class Calculator {
             this.display.value = "Error"
         }
     }
+
+    clearDisplay() {
+        this.display.value = ""
+    }
 }
