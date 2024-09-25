@@ -41,4 +41,13 @@ class Calculator {
 
         this.display.value += char
     }
+
+    calculate() {
+        try {
+            this.display.value = eval(this.display.value)
+        }
+        catch(error) {
+            this.display.value = "Error"
+        }
+    }
 }
