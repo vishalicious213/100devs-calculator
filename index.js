@@ -26,4 +26,19 @@ class Calculator {
             this.calculate()
         }
     }
+
+    // ⬇️ RENDER FUNCTIONS ⬇️
+
+    // Add clicked button's character to display
+    addToDisplay(char) {
+        if (char === "clear") {
+            this.clearDisplay()
+        } else if (char !== "=") {
+            if (char === "x") {
+                char = "*" // change x to * for multiplication
+            }
+        }
+
+        this.display.value += char
+    }
 }
